@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerViewNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9ED-cK-BCq">
+                                <rect key="frame" x="0.0" y="184" width="393" height="34"/>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsB-PO-PWp">
+                                <rect key="frame" x="0.0" y="273" width="393" height="216"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBl-fY-FaH">
+                                <rect key="frame" x="0.0" y="518.33333333333337" width="393" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49g-1T-48W">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="food submit"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCc-nE-vsw">
+                                        <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="date submit"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NBl-fY-FaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5c1-Vm-jCQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NBl-fY-FaH" secondAttribute="trailing" id="7mY-dt-kDN"/>
+                            <constraint firstItem="NsB-PO-PWp" firstAttribute="top" secondItem="9ED-cK-BCq" secondAttribute="bottom" constant="55" id="DV2-MH-ULu"/>
+                            <constraint firstItem="NsB-PO-PWp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KYa-RS-le8"/>
+                            <constraint firstItem="9ED-cK-BCq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mnp-X6-nWs"/>
+                            <constraint firstItem="9ED-cK-BCq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="TCJ-hT-2EJ"/>
+                            <constraint firstItem="NsB-PO-PWp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XXH-DC-sjT"/>
+                            <constraint firstItem="NBl-fY-FaH" firstAttribute="top" secondItem="9ED-cK-BCq" secondAttribute="bottom" constant="300" id="XhC-4R-Gam"/>
+                            <constraint firstAttribute="trailing" secondItem="9ED-cK-BCq" secondAttribute="trailing" id="igc-y1-TqV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePickerOutlet" destination="9ED-cK-BCq" id="2Q5-tO-9mf"/>
+                        <outlet property="pickerOutlet" destination="NsB-PO-PWp" id="bZ0-Ik-48M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="21" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
