@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9ED-cK-BCq">
-                                <rect key="frame" x="0.0" y="184" width="393" height="34"/>
+                                <rect key="frame" x="0.0" y="184" width="393" height="34.333333333333343"/>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsB-PO-PWp">
-                                <rect key="frame" x="0.0" y="273" width="393" height="216"/>
+                                <rect key="frame" x="0.0" y="273.33333333333331" width="393" height="216"/>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBl-fY-FaH">
                                 <rect key="frame" x="0.0" y="518.33333333333337" width="393" height="34.333333333333371"/>
@@ -29,11 +29,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="food submit"/>
+                                        <connections>
+                                            <action selector="foodSubmitAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="49U-Qo-V6i"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCc-nE-vsw">
                                         <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="date submit"/>
+                                        <connections>
+                                            <action selector="dateSubmitAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkN-mC-8Ya"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
